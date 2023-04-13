@@ -1,0 +1,19 @@
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://www.uow.edu.au/media/assets/media-centre/UOW-Generic-Students.pdj.11.03.20.008-1920x1080.jpg");
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: normal;
+  color: white;
+  font-size: 9.8em; /* Using 10em or more results in text returning to bottom */
+}
+
+a {
+  font-family: 'Montserrat', sans-serif; /* Official font used by UOW themselves!! 0.0 */
+  font-weight: bold;
+  color: white;
+  font-size: 1.5em;
+}
