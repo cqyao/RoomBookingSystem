@@ -3,18 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="login_stylesheet.css">
-  <title>Title</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <title>Log-In</title>
 </head>
 <body>
-  <h2>Log In</h2>
-
-  <nav class="navigation">
-    <button onclick="location.href = 'main.html';">HOME</button>
-    <button>CONTACT US</button>
-  </nav>
-
-  <div id="login-box">
-    <b>Sign In</b>
+  <div id="nav-bar">
+    <button onclick="location.href='main.html';">HOME ></button>
+    <button>LOGIN</button>
+  </div>
+  <div id="login-box" style="text-align:center">
+    <form>
+      <div id="account-input">
+        <img src="https://www.uowcollege.edu.au/site-assets/logos/uow-college/UOWC_Secondary_DarkBlue.png" alt="UOW logo">
+        <input type="text" id="username" name="username" placeholder="Username"><br><!-- ignore missing label error, using placeholder. -->
+        <input type="password" id="password" name="password" placeholder="Password">
+        <input type="button" id="sign-in" value="LOGIN">
+      </div>
+    </form>
   </div>
 </body>
 </html>
