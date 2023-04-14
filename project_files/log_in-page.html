@@ -8,17 +8,37 @@
   <title>Log-In</title>
 </head>
 <body>
-  <div id="nav-bar">
-    <button onclick="location.href='main.html';">HOME ></button>
-    <button>LOGIN</button>
+  <div id="header">
+    <h2 class="logo">UOW Room Booking</h2>
+    <div id="nav-bar">
+      <button onclick="location.href='https://www.uow.edu.au/';">HOME ></button>
+      <button>LOGIN</button>
+    </div>
   </div>
+
   <div id="login-box" style="text-align:center">
     <form>
       <div id="account-input">
         <img src="https://www.uowcollege.edu.au/site-assets/logos/uow-college/UOWC_Secondary_DarkBlue.png" alt="UOW logo">
         <input type="text" id="username" name="username" placeholder="Username"><br><!-- ignore missing label error, using placeholder. -->
         <input type="password" id="password" name="password" placeholder="Password">
-        <input type="button" id="sign-in" value="LOGIN">
+        <select name="role" id="role">
+          <option value="staff">Staff</option>
+          <option value="student">Student</option>
+        </select>
+        <script>
+          function getRole() { <!-- this function changes the onclick action of login button based on role selection -->
+            var role = document.getElementById("role").value; <!-- get the value of role selection -->
+            if (role=="staff") {
+              window.location.href="main.html";
+            }
+            else if (role=="student") {
+              window.location.href="https://www.google.com";
+            }
+          }
+        </script>
+        <input type="button" id="sign-in" value="LOGIN" onclick="getRole()">
+
       </div>
     </form>
   </div>
