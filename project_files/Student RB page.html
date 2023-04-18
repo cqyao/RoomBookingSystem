@@ -19,11 +19,12 @@
     <h1 class="room_list" style="margin-left:10px; font-size: 1.5vw;">Room List</h1>
     <hr style="width: 25%; margin-left: 10px;"><br>
     <table>
-      <tr id="header_row">
+      <tr class="header_row">
         <td>Room Name</td>
         <td>Room Code</td>
         <td>Booking Date & Time</td>
         <td>Status</td>
+        <td>Action</td>
       </tr>
 
       <tr id="room_one_row">
@@ -31,6 +32,7 @@
         <td>r04</td>
         <td>24/04/2023, 10:00 AM</td>
         <td>Available</td>
+        <td class="actionCell"><a href="Payment page.html">Book</a></td>
       </tr>
 
       <tr id="room_two_row">
@@ -38,6 +40,25 @@
         <td>r02</td>
         <td>24/04/2023, 4:00 PM</td>
         <td>Booked</td>
+        <td class="actionCell" style="background-color:darkred;">Unavailable</td>
+      </tr>
+    </table>
+  </div><br><br>
+  <div id="changeRoomListContainer">
+    <h1 class="change_room_list" style="margin-left:10px; font-size: 1.5vw;">Your Rooms</h1>
+    <hr style="width: 25%; margin-left: 10px;"><br>
+    <table>
+      <tr class="header_row">
+        <td>Room Name</td>
+        <td>Room Code</td>
+        <td>Booking Date & Time</td>
+        <td>Action</td>
+      </tr>
+      <tr>
+        <td>Mountain Zoo</td>
+        <td>r11</td>
+        <td>26/05/2023, 8:00 PM</td>
+        <td><a>Modify/Cancel Booking</a></td>
       </tr>
     </table>
   </div>
