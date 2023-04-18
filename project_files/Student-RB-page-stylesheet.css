@@ -10,7 +10,7 @@
   font-family: "Times New Roman", Times, serif;
   font-weight: normal;
   color: white;
-  font-size: 7vw; /* Using 10em or more results in text returning to bottom */
+  font-size: 7vw;
 }
 
 #nav-bar button { /* Navigation buttons */
