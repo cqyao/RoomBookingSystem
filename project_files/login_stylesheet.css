@@ -3,23 +3,29 @@
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   padding: 10px;
+  padding-left: 20px;
   border-radius: 10px;
 }
 
-#header h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
+#header h2 { /* "UOW Room Booking" header */
+  margin-top: -15px;
+  margin-bottom: 5px;
   font-family: "Times New Roman", Times, serif;
   font-weight: normal;
   color: white;
-  font-size: 9vw; /* Using 10em or more results in text returning to bottom */
+  font-size: 7vw; /* Using 10em or more results in text returning to bottom */
 }
 
-#header img {
-  float: right;
-  height: 200px;
-  margin-top: 25px;
-  margin-right: 20px;
+#nav-bar button { /* Navigation buttons */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #041942;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 }
 
 body {
@@ -27,18 +33,6 @@ body {
   background-size: cover;
   padding: 15px;
 
-}
-
-#nav-bar button {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 1.5vw;
-  color: #041942;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
 }
 
 #login-box {

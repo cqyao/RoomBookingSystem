@@ -1,21 +1,23 @@
 #header {
   padding: 10px;
+  padding-left: 20px;
+  background-color: #041942;
 }
 
-#header h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
+#header h2 { /* "UOW Room Booking" header */
+  margin-top: -15px;
+  margin-bottom: 5px;
   font-family: "Times New Roman", Times, serif;
   font-weight: normal;
-  color: black;
-  font-size: 9vw; /* Using 10em or more results in text returning to bottom */
+  color: white;
+  font-size: 7vw; /* Using 10em or more results in text returning to bottom */
 }
 
-#nav-bar button {
+#nav-bar button { /* Navigation buttons */
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 1vw;
-  color: #041942;
+  color: white;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -24,30 +26,24 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;;
+  font-family: 'Roboto', sans-serif;
+  padding: 15px;
 }
 
-
-
-table, td, tr {
-  border: 2px solid black;
+table, tr {
+  border: 3px solid grey;
+  border-collapse: collapse;
+  font-size: 2vw;
+  padding: 5px;
 }
 
 td {
-  font-size: 1.5vw;
-  text-align: center;
-  width: 120px;
-  height: 80px;
+  border: 10px solid white;
+  padding-left: 30px;
+  padding-right: 20px;
 }
 
-.dateCell { /* set width of the cell containing date and day */
-  width: 250px;
-}
-
-.dateCell, .timeCell {
-  background-color: green;
-}
-
-.reserveCell:hover {  /* Set color of cell on mouse hover */
-  background-color: #b3d4fc;
+#header_row {
+  background-color: #cccccc;
+  font-weight: bold;
 }
