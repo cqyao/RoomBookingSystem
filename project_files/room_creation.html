@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="creation_stylesheet.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+  <title>Create Room</title>
+</head>
+<body>
+  <div id="header">
+    <h2 class="logo">Room Booking System</h2>
+    <div id="nav-bar">
+      <button onclick="location.href='https://www.uow.edu.au/';">HOME</button>
+      <button onclick="location.href='log_in-page.html';">LOGIN</button>
+      <button>STUDENT PAGE</button>
+    </div>
+  </div>
+  <div id="room_details_header">
+    <h1>NEW BOOKING</h1>
+  </div>
+  <div id="room_details_container">
+    <form id="room_details">
+      <label for="room_name">ROOM NAME</label><br>
+      <input type="text" id="room_name" name="room_name" required><br><br>
+      <label for="room_date">BOOKING DATE</label>
+      <label for="room_time">TIME</label><br>
+      <input type="date" id="room_date" name="room_date" value="2023-mm-dd" required>
+      <input type="time" id="room_time" name="room_time" step="1800" required><br><br>
+      <label for="room_capacity">ROOM CAPACITY</label><br>
+      <input type="number" id="room_capacity" name="room_capacity" min="1" max="8" required><i style="font-size: .9vw"> Maximum 8 people allowed per room</i><br><br>
+      <label for="promo_code">PROMO CODE (optional)</label><br>
+      <input type="text" id="promo_code" name="promo_code" required><br><br>
+      <input type="submit" id="submit" name="submit" value="Launch">
+      <input type="reset" id="reset" name="reset">
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("room_date").valueAsDate = new Date(); <!-- replaces empty date field with today's date -->
+  </script>
+</body>
+</html>
