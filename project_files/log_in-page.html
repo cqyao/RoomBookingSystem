@@ -26,11 +26,13 @@
           <option value="staff">Staff</option>
           <option value="student">Student</option>
         </select>
+      </div>
+    </form>
         <script>
           function getRole() { <!-- this function changes the onclick action of login button based on role selection -->
             var role = document.getElementById("role").value; <!-- get the value of role selection -->
             if (role==="staff") {
-              window.location.href="main.html";
+              window.location.href="Staff RB page.html";
             }
             else if (role==="student") {
               window.location.href="Student RB page.html";
@@ -38,9 +40,6 @@
           }
         </script>
         <input type="button" id="sign-in" value="LOGIN" onclick="getRole()">
-
       </div>
-    </form>
-  </div>
 </body>
 </html>

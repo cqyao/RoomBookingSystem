@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="Staff-RB-page-stylesheet.css">
+  <title>Staff RBS</title>
+</head>
+<body>
+<div id="header">
+  <h2 class="logo">UOW Room Booking</h2>
+  <div id="nav-bar">
+    <button onclick="location.href='https://www.uow.edu.au/';">HOME ></button>
+    <button onclick="location.href='log_in-page.html';">LOGIN ></button>
+    <button>STAFF PAGE</button>
+  </div>
+</div><br><br>
+<div>
+  <h1 style="font-size:1.5vw; margin-left:10px;">Create Room</h1><hr style="width:25%; margin-left: 10px;"><br>
+  <table id="create_room_table">
+    <tr>
+      <td><label for="room_name">Room Name</label></td>
+      <td><label for="room_code">Room Code</label></td>
+      <td><label for="date_picker">Date & Time</label></td>
+      <td><label for="room_price">Price</label></td>
+    </tr>
+    <tr>
+      <td><select name="room_name" id="room_name" onchange="changeCode();">
+        <option disabled selected value> -- Select Room -- </option>
+        <option value="cloudySky">Cloudy Sky</option>
+        <option value="safariPark">Safari Park</option>
+        <option value="mountainZoo">Mountain Zoo</option>
+        <option value="crystalLake">Crystal Lake</option>
+      </select></td>
+      <td><input type="text" name="room_code" id="room_code" readonly></td>
+      <td><input type="datetime-local" id="date_picker"></td>
+      <td>$<input type="number" name="room_price" id="room_price"></td>
+      <td><button onclick="addRoom()">Add room</button></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td><input type="text" id="room_details" style="width:50vw"></td>
+    </tr>
+  </table>
+</div>
+
+<script>
+  function changeCode() {
+    var roomName = document.getElementById("room_name");
+    var textInput = document.getElementById("room_code");
+    if (roomName.value === "cloudySky") {
+      textInput.value = "r01"
+    }else if (roomName.value === "safariPark") {
+      textInput.value = "r02";
+    }else if(roomName.value === "mountainZoo") {
+      textInput.value = "r03";
+    }else if(roomName.value === "crystalLake") {
+      textInput.value = "r04";
+    }
+  }
+
+  function addRoom() {
+    var roomDetails = document.getElementById("room_details");
+    var roomName = document.getElementById("room_name");
+    var roomCode = document.getElementById("room_code");
+    var roomDate = document.getElementById("date_picker");
+    var roomPrice = document.getElementById("room_price");
+
+    roomDetails.value = roomName.value + " " + roomCode.value + " " + roomDate.value + " $" + roomPrice.value;
+  }
+
+</script>
+</body>
+</html>
