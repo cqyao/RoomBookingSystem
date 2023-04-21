@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="Student-RB-page-stylesheet.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
   <title>Student RBS</title>
 </head>
 <body>
   <div id="header">
     <h2 class="logo">UOW Room Booking</h2>
     <div id="nav-bar">
-      <button onclick="location.href='https://www.uow.edu.au/';">HOME ></button>
-      <button onclick="location.href='log_in-page.html';">LOGIN ></button>
+      <button onclick="location.href='https://www.uow.edu.au/';">HOME </button>
+      <button onclick="location.href='log_in-page.html';">LOGIN </button>
       <button>STUDENT PAGE</button>
     </div>
   </div>
   <br><br>
   <div id="room_list_container">
-    <h1 class="room_list" style="margin-left:10px; font-size: 1.5vw;">Room List</h1>
-    <hr style="width: 25%; margin-left: 10px;"><br>
+    <h1 class="room_list">Room List</h1>
     <table>
       <tr class="header_row">
         <td>Room Name</td>
@@ -40,13 +40,12 @@
         <td>r02</td>
         <td>24/04/2023, 4:00 PM</td>
         <td>Booked</td>
-        <td class="actionCell" style="background-color:darkred;">Unavailable</td>
+        <td class="actionCell" style="background-color:darkred; color: white;">Unavailable</td>
       </tr>
     </table>
   </div><br><br>
   <div id="changeRoomListContainer">
-    <h1 class="change_room_list" style="margin-left:10px; font-size: 1.5vw;">Your Rooms</h1>
-    <hr style="width: 25%; margin-left: 10px;"><br>
+    <h1 class="change_room_list">Your Rooms</h1>
     <table>
       <tr class="header_row">
         <td>Room Name</td>
@@ -58,7 +57,7 @@
         <td>Mountain Zoo</td>
         <td>r11</td>
         <td>26/05/2023, 8:00 PM</td>
-        <td><a>Modify/Cancel Booking</a></td>
+        <td><a>Modify/Cancel</a></td>
       </tr>
     </table>
   </div>
