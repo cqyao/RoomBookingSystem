@@ -84,5 +84,6 @@ input {
 #reset:hover, #submit:hover {
   color: white;
   background-color: #1962DB;
+  cursor: pointer;
 }
 
