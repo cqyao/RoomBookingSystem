@@ -2,7 +2,7 @@
   margin: 0 auto;
   margin-top: 10vw;
   width: 50%;
-  height: 450px;
+  height: 525px;
   background-color: white;
   border-radius: 1.5vw;
 }
@@ -18,7 +18,7 @@ table, td, tr {
   border-bottom: 0;
 }
 
-#cardNumTD, #expiryTD, #emailTD, #cvcTD {
+#cardNumTD, #expiryTD, #emailTD, #cvcTD, #nameTD {
   padding-left: 2.4vw;
 }
 

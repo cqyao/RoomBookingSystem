@@ -22,14 +22,17 @@
   <div id="payment_form">
     <div id="header"><h1>Payment Details</h1></div>
     <table class="table">
+      <tr>
+        <td id="nameTD"><label for="name">NAME</label><br><input type="text" name="name" id="name"></td>
+      </tr>
         <tr>
-          <td id="cardNumTD"><label for="cardNum">CARD NUMBER </label><br><input type="text" name="cardNum" placeholder="* * * * / * * * * / * * * * / * * * *" size="24" id="cardNum"></td>
+          <td id="cardNumTD"><label for="cardNum">CARD NUMBER</label><br><input type="text" name="cardNum" placeholder="* * * * / * * * * / * * * * / * * * *" size="24" id="cardNum"></td>
         </tr>
         <tr>
-          <td id="expiryTD"><label for="expiry">EXPIRY DATE</label><br><input type="text" name="expiry" id="expiry" size="7" placeholder="MM/YY"></td>
+          <td id="expiryTD"><label for="expiry">EXPIRY DATE</label>&nbsp&nbsp&nbsp&nbsp<label for="cvc">CVC NUMBER</label><br><input type="text" name="expiry" id="expiry" size="7" placeholder="MM/YY">&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="cvc" id="cvc" placeholder="CVC" size="5" maxlength="3"></td>
         </tr>
         <tr>
-          <td id="cvcTD"><label for="cvc">CVC NUMBER</label><br><input type="text" name="cvc" id="cvc" placeholder="CVC" size="5" maxlength="3"></td>
+          <td id="cvcTD"></td>
         </tr>
         <tr>
           <td id="emailTD"><label for="email">E-MAIL</label><br><input type="text" name="email" id="email"></td>
