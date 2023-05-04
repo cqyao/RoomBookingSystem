@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="view_rooms_stylesheet.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+  <title>Rooms</title>
+</head>
+<script>
+  function getData() {
+    document.getElementById("room_name").innerHTML = localStorage.getItem("roomName");
+    document.getElementById("date").innerHTML = localStorage.getItem("date");
+    document.getElementById("capacity").innerHTML = localStorage.getItem("capacity");
+  }
+
+</script>
+
+<body>
+<div id="header">
+  <h2 class="logo">UOW Room Booking</h2>
+  <div id="nav-bar">
+    <button onclick="location.href='https://www.uow.edu.au/';">HOME </button>
+    <button onclick="location.href='log_in-page.html';">LOGIN </button>
+    <button>STAFF PAGE</button>
+  </div>
+</div>
+  <div id="room_container">
+    <h1>Room List</h1>
+    <table id="rooms">
+      <tr id="header_row">
+        <td>Room Name</td>
+        <td>Date & Time</td>
+        <td>Capacity</td>
+        <td>ACTION</td>
+      </tr>
+      <tr>
+        <td><span id="room_name"></span></td>
+        <td><span id="date"></span></td>
+        <td><span id="capacity"></span></td>
+        <td><a>Edit</a></td>
+      </tr>
+    </table>
+  </div>
+  <script>
+    getData();
+
+  </script>
+
+</body>
+</html>

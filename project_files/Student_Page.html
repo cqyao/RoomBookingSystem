@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="Student-RB-page-stylesheet.css">
+  <link rel="stylesheet" href="Student_Page_stylesheet.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
   <title>Student RBS</title>
 </head>
@@ -28,7 +28,7 @@
       </tr>
 
       <tr id="room_one_row">
-        <td>Cloudy Sky</td>
+        <td id="room1">Cloudy Sky</td>
         <td>r04</td>
         <td>24/04/2023, 10:00 AM</td>
         <td>Available</td>
@@ -61,5 +61,10 @@
       </tr>
     </table>
   </div>
+
+  <script>
+    var roomOne = document.getElementById("room1").innerText;
+    localStorage.setItem("input20", roomOne);
+  </script>
 </body>
 </html>

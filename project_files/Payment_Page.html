@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="Payment_Page_stylesheet.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+  <title>Payment Gateway</title>
+</head>
+<script>
+  function getData(){
+    var name = document.getElementById("firstName").value + document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var address = document.getElementById("address").value + ", " + document.getElementById("city").value  + ", " + document.getElementById("country").value + ", " + document.getElementById("postal").value;
+
+    localStorage.setItem("input1", name);
+    localStorage.setItem("input2", email);
+    localStorage.setItem("input3", address);
+  }
+</script>
+
+<body style="background-color:#f2f2f2">
+  <div id="payment_form">
+    <div id="header"><h1>Payment Details</h1></div>
+    <table class="table">
+        <tr>
+          <td id="cardNumTD"><label for="cardNum">CARD NUMBER </label><br><input type="text" name="cardNum" placeholder="* * * * / * * * * / * * * * / * * * *" size="24" id="cardNum"></td>
+        </tr>
+        <tr>
+          <td id="expiryTD"><label for="expiry">EXPIRY DATE</label><br><input type="text" name="expiry" id="expiry" size="7" placeholder="MM/YY"></td>
+        </tr>
+        <tr>
+          <td id="cvcTD"><label for="cvc">CVC NUMBER</label><br><input type="text" name="cvc" id="cvc" placeholder="CVC" size="5" maxlength="3"></td>
+        </tr>
+        <tr>
+          <td id="emailTD"><label for="email">E-MAIL</label><br><input type="text" name="email" id="email"></td>
+        </tr>
+        <tr>
+          <td colspan="3" id="payTD"><a href="Receipt page.html"><button type="button" onclick="getData();">Pay</button></a></td>
+        </tr>
+    </table>
+  </div>
+</body>
+
+</html>

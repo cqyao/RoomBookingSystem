@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>Order confirmation</title>
+  <style>
+    div.base {
+      border: 1px;
+      height: 450px;
+      width: 500px;
+      margin: 0 auto;
+      margin-top: 10vw;
+      background-color: white;
+      border-radius: 1vw;
+      text-align: center;
+      padding: 1vw;
+      box-shadow: 5px 10px lightgrey;
+    }
+    td {
+      padding: 10px;
+      background-color: white;
+    }
+    #details_container {
+      margin: 0 auto;
+    }
+    #details_container td {
+      font-size: 1.5vw;
+    }
+  </style>
+
+  <script>
+    function load(){
+      document.getElementById("name").innerHTML = localStorage.getItem("input1");
+      document.getElementById("room").innerHTML = localStorage.getItem("input20");
+      document.getElementById("address2").innerHTML = localStorage.getItem("input3");
+      document.getElementById("date").innerHTML = localStorage.getItem("input2");
+      document.getElementById("email").innerHTML = localStorage.getItem("input2");
+    }
+  </script>
+</head>
+  <body style="background-color:#e6e6ff;">
+    <div class="base">
+      <span style="font-size:2.5vw">Your booking is successful!</span><br>
+      <br><br>
+      <span style="font-size:18px;">Order NO #9999</span><br>
+      <table id="details_container">
+        <tr>
+          <td>Name:</td>
+          <td><span style="display:block" id="name"></span></td>
+        </tr>
+        <tr>
+          <td>Room Name:</td>
+          <td><span style="display:block" id="room"></span></td>
+        </tr>
+        <tr>
+          <td>Date & Time:</td>
+          <td><span style="display:block" id="date"></span></td>
+        </tr>
+        <tr>
+          <td>Total:</td>
+          <td><span style="display:block">$15.90</span></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="color:gray; font-size:18px;">You will receive a confirmation email.<br></td>
+        </tr>
+        <script>
+          load();
+        </script>
+      </table>
+    </div>
+  </body>
+</html>

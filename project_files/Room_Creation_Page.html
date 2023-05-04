@@ -29,14 +29,23 @@
       <label for="room_capacity">ROOM CAPACITY</label><br>
       <input type="number" id="room_capacity" name="room_capacity" min="1" max="8" required><i style="font-size: .9vw"> Maximum 8 people allowed per room</i><br><br>
       <label for="promo_code">PROMO CODE (optional)</label><br>
-      <input type="text" id="promo_code" name="promo_code" required><br><br>
-      <input type="submit" id="submit" name="submit" value="Launch">
+      <input type="text" id="promo_code" name="promo_code"><br><br>
+      <input type="button" id="submit" name="submit" value="Launch" onclick="location.href='View_Rooms_Page.html';setData();">
       <input type="reset" id="reset" name="reset">
     </form>
   </div>
 
   <script>
     document.getElementById("room_date").valueAsDate = new Date(); <!-- replaces empty date field with today's date -->
+
+    function setData() {
+      var name = document.getElementById("room_name").value;
+      var dateTime = document.getElementById("room_date").value.concat(" ", document.getElementById("room_time").value);
+      var capacity = document.getElementById("room_capacity").value;
+      localStorage.setItem("roomName", name);
+      localStorage.setItem("date", dateTime);
+      localStorage.setItem("capacity", capacity);
+    }
   </script>
 </body>
 </html>
