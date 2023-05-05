@@ -108,7 +108,7 @@
       <tr id="room_one_row">
         <td id="room1">Cloudy Sky</td>
         <td>r04</td>
-        <td>24/04/2023, 10:00 AM</td>
+        <td id="date1">24/04/2023, 10:00 AM</td>
         <td>Available</td>
         <td class="actionCell"><a href="Payment_Page.html">Book</a></td>
       </tr>
@@ -141,8 +141,10 @@
   </div>
 
   <script>
-    var roomOne = document.getElementById("room1").innerText;
-    localStorage.setItem("input20", roomOne);
+    var room = document.getElementById("room1").innerText;
+    var date = document.getElementById("date1").innerText;
+    localStorage.setItem("input4", room);
+    localStorage.setItem("input5", date);
   </script>
 </body>
 </html>

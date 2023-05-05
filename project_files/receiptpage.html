@@ -4,20 +4,81 @@
   <title>Order confirmation</title>
 
   <style>
-    div.base{
+    #header {
+      padding: 10px;
+      padding-left: 20px;
+      background-color: #041942;
+    }
+
+    #header h2 { /* "UOW Room Booking" header */
+      margin-top: -15px;
+      margin-bottom: 5px;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: normal;
+      color: white;
+      font-size: 7vw;
+    }
+
+    #nav-bar button { /* Navigation buttons */
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      font-size: 1vw;
+      color: white;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      overflow: hidden;
+      outline: none;
+    }
+    body {
+      background-color:#F6FAFD
+    }
+    #divTop {
+      background-color: lightblue;
+      width: 100%;
+      height: 3.5vw;
+      border-top-left-radius: 1vw;
+      border-top-right-radius: 1vw;
+      padding-top: 1vw;
+      margin-top: 5vw;
+    }
+    #divBot{
+      text-align: center;
       border:1px;
-      height:350px;
+      height:400px;
       width:480px;
       background-color:white;
       border-radius: 1vw;
-      padding: 2vw;
       box-shadow: 5px 10px lightgrey;
-      margin:0 auto;
-      margin-top:100px;
+      margin: 0 auto;
     }
 
     td{
       padding:10px;
+      width: 10vw;
+      font-size: 1.35vw;
+    }
+
+    table {
+      margin: 0 auto;
+      width: 25vw;
+      font-family: 'Poppins', sans-serif;
+      text-align: left; /* overwrite div center text align */
+    }
+
+    .bold {
+      font-weight: bolder;
+      font-size: 1.4vw;
+    }
+
+    #divHeader {
+      font-family: 'Poppins', sans-serif;
+      margin: 0 auto;
+    }
+    #endMessage {
+      color: grey;
+      text-align: center;
+      font-size: 1.3vw;
     }
 
   </style>
@@ -32,36 +93,45 @@
   </script>
 </head>
 
-<body style="background-color:#F6FAFD">
-<div class="base">
-  <span style="margin-left:100px; font-family:'Poppins', sans-serif; font-size:24px;">Your booking is successful!</span><br>
-  <br><br>
-  <span style="margin-left:10px; font-size:18px;">Order NO #9999</span><br>
-  <table>
-    <tr>
-      <td style="font-weight:bolder;" width="20px;">Name:</td>
-      <td><span style="display:block" id="name"></span></td>
-    </tr>
-    <tr>
-      <td style="font-weight:bolder;">Room Name:</td>
-      <td><span style="display:block" id="room"></span></td>
-    </tr>
-    <tr>
-      <td style="font-weight:bolder;">Date&Time:</td>
-      <td><span style="display:block" id="date"></span></td>
-    </tr>
-    <tr>
-      <td style="font-weight:bolder;">Total:</td>
-      <td><span style="display:block">$15.90</span></td>
-    </tr>
-    <tr>
-      <td colspan="2" style="color:gray; font-size:18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You will be received a confirmation email.<br><span style="display:block; margin-left:130px;" id="email"></span></td>
-    </tr>
+<body>
+  <div id="header">
+    <h2 class="logo">UOW Room Booking</h2>
+    <div id="nav-bar">
+      <button onclick="location.href='https://www.uow.edu.au/';">HOME </button>
+      <button onclick="location.href='LogIn_Page.html';">LOGIN </button>
+      <button>STUDENT PAGE</button>
+    </div> <!-- End div for nav-bar -->
+  </div> <!-- End div for header -->
+  <div id="divBot">
+    <div id="divTop">
+      <h1 id="divHeader">Your Booking Is Successful</h1>
+    </div><br>
+    <span style="font-size:18px; color: grey;">Transaction #1234</span><br>
+    <table>
+      <tr>
+        <td style="width: 20px;" class="bold">Name:</td>
+        <td><span style="display:block" id="name"></span></td>
+      </tr>
+      <tr>
+        <td class="bold">Room Name:</td>
+        <td><span style="display:block" id="room"></span></td>
+      </tr>
+      <tr>
+        <td class="bold">Date & Time:</td>
+        <td><span style="display:block" id="date"></span></td>
+      </tr>
+      <tr>
+        <td class="bold">Total:</td>
+        <td><span style="display:block">$15.90</span></td>
+      </tr>
+      <tr>
+        <td colspan="2" id="endMessage">A confirmation e-mail will be sent to <br><span style="display:block;" id="email"></span></td>
+      </tr>
 
-    <script>
-      load();
-    </script>
-  </table>
-</div>
+      <script>
+        load();
+      </script>
+    </table>
+  </div>
 </body>
 </html>
