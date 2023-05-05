@@ -110,26 +110,27 @@
     <form>
       <div id="account-input">
         <img src="https://www.uowcollege.edu.au/site-assets/logos/uow-college/UOWC_Secondary_DarkBlue.png" alt="UOW logo">
-        <input type="text" id="username" name="username" placeholder="Username"><br><!-- ignore missing label error, using placeholder. -->
-        <input type="password" id="password" name="password" placeholder="Password">
+        <input type="text" id="username" name="username" placeholder="Username" required><br><!-- ignore missing label error, using placeholder. -->
+        <input type="password" id="password" name="password" placeholder="Password" required>
         <select name="role" id="role">
           <option value="staff">Staff</option>
           <option value="student">Student</option>
         </select>
-      </div>
-    </form>
-        <script>
-          function getRole() { <!-- this function changes the onclick action of login button based on role selection -->
-            var role = document.getElementById("role").value; <!-- get the value of role selection -->
-            if (role==="staff") {
-              window.location.href="Staff_Main_Page.html";
-            }
-            else if (role==="student") {
-              window.location.href="Student_Page.html";
-            }
-          }
-        </script>
         <input type="button" id="sign-in" value="LOGIN" onclick="getRole()">
       </div>
+    </form>
+  </div>
+
+  <script>
+      function getRole() { <!-- this function changes the onclick action of login button based on role selection -->
+        var role = document.getElementById("role").value; <!-- get the value of role selection -->
+        if (role==="staff") {
+          window.location.href="Staff_Main_Page.html";
+        }
+        else if (role==="student") {
+          window.location.href="Student_Page.html";
+        }
+    }
+  </script>
 </body>
 </html>
