@@ -2,11 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="login_stylesheet.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <title>Log-In</title>
 </head>
+<style>
+  #header {
+    padding: 10px;
+    padding-left: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+  }
+
+  #header h2 { /* "UOW Room Booking" header */
+    margin-top: -15px;
+    margin-bottom: 5px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+    color: white;
+    font-size: 7vw;
+  }
+
+  #nav-bar button { /* Navigation buttons */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    color: #041942;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+  }
+
+  body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://shorturl.at/cmuyE"); /* shortened url as original is too long */
+    background-size: cover;
+    padding: 15px;
+
+  }
+
+  #login-box {
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 30vw;
+    width: 30vw;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 4vw;
+    padding: 20px;
+  }
+
+  #account-input img {
+    height: 10vw;
+    margin: 0;
+  }
+
+  #account-input select {
+    font-size: 1.8vw;
+    border-radius: 1vw;
+    padding: 5px;
+  }
+
+  input {
+    margin-top: 0;
+    font-size: 1.5vw;
+    border-radius:5px;
+    padding: 10px;
+    background-color: #e8f0fe;
+  }
+
+  #sign-in {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8vw;
+    color: white;
+    border-radius: .5vw;
+    padding: 5px;
+    font-weight: bold;
+    background-color: #333f46;
+    width: 10vw;
+  }
+
+  #password {
+    width: 25vw;
+  }
+
+  #username {
+    width: 25vw;
+  }
+</style>
 <body>
   <div id="header">
     <h2 class="logo">UOW Room Booking</h2>
@@ -32,10 +122,10 @@
           function getRole() { <!-- this function changes the onclick action of login button based on role selection -->
             var role = document.getElementById("role").value; <!-- get the value of role selection -->
             if (role==="staff") {
-              window.location.href="Staff RB page.html";
+              window.location.href="Staff_Main_Page.html";
             }
             else if (role==="student") {
-              window.location.href="Student RB page.html";
+              window.location.href="Student_Page.html";
             }
           }
         </script>

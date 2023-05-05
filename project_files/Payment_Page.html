@@ -2,45 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="Payment_Page_stylesheet.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
   <title>Payment Gateway</title>
 </head>
+<style>
+  #payment_form {
+    margin: 0 auto;
+    margin-top: 10vw;
+    width: 50%;
+    height: 450px;
+    background-color: white;
+    border-radius: 1.5vw;
+  }
+
+  table, td, tr {
+    font-size: 1.25vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    margin: 0 auto;
+    background-color: white;
+    width: 90%;
+    border: 5px solid white;
+    border-bottom: 0;
+  }
+
+  #cardNumTD, #expiryTD, #emailTD, #cvcTD, #nameTD {
+    padding-left: 2.4vw;
+  }
+
+  #payTD {
+    text-align: center;
+    border-bottom: 0;
+  }
+
+  input {
+    font-size: 1.5vw;
+    padding: .5vw;
+  }
+
+  #header {
+    background-color: lightblue;
+    width: 100%;
+    height: 60px;
+    border-top-left-radius: 1.5vw;
+    border-top-right-radius: 1.5vw;
+  }
+
+  #header h1 {
+    margin: 2vw;
+    font-size: 3vw;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .table button {
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: .8vw;
+    border: lightgray;
+    background-color: #1962DB;
+    color: white;
+    font-size: 1.3vw;
+  }
+
+  .table input {
+    border-radius: .5vw;
+    border: 1.5px solid lightgrey;
+  }
+</style>
+
+<script>
+  function getData(){
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+
+    localStorage.setItem("input1", name);
+    localStorage.setItem("input2", email);
+  }
+</script>
 
 <body style="background-color:#f2f2f2">
-  <div id="payment_form">
-    <div id="header"><h1>Payment Details</h1></div>
-    <table class="table">
-      <tr>
-        <td id="nameTD"><label for="name">NAME</label><br><input type="text" name="name" id="name"></td>
-      </tr>
-        <tr>
-          <td id="cardNumTD"><label for="cardNum">CARD NUMBER</label><br><input type="text" name="cardNum" placeholder="* * * * / * * * * / * * * * / * * * *" size="24" id="cardNum"></td>
-        </tr>
-        <tr>
-          <td id="expiryTD"><label for="expiry">EXPIRY DATE</label>&nbsp&nbsp&nbsp&nbsp<label for="cvc">CVC NUMBER</label><br><input type="text" name="expiry" id="expiry" size="7" placeholder="MM/YY">&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="cvc" id="cvc" placeholder="CVC" size="5" maxlength="3"></td>
-        </tr>
-        <tr>
-          <td id="cvcTD"></td>
-        </tr>
-        <tr>
-          <td id="emailTD"><label for="email">E-MAIL</label><br><input type="text" name="email" id="email"></td>
-        </tr>
-        <tr>
-          <td colspan="3" id="payTD"><a href="Receipt page.html"><button type="button" onclick="setData();">Pay</button></a></td>
-        </tr>
-    </table>
-  </div>
-
-  <script>
-    function setData(){
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email").value;
-      localStorage.setItem("input1", name);
-      localStorage.setItem("input2", email);
-    }
-  </script>
-
+<div id="payment_form">
+  <div id="header"><h1>Payment Details</h1></div>
+  <table class="table">
+    <tr>
+      <td id="nameTD"><label for="name">NAME</label><br><input type="text" name="name" id="name"></td>
+    </tr>
+    <tr>
+      <td id="cardNumTD"><label for="cardNum">CARD NUMBER</label><br><input type="text" name="cardNum" placeholder="* * * * / * * * * / * * * * / * * * *" size="24" id="cardNum"></td>
+    </tr>
+    <tr>
+      <td id="expiryTD"><label for="expiry">EXPIRY DATE</label>&nbsp;&nbsp;&nbsp;&nbsp;<label for="cvc">CVC NUMBER</label><br><input type="text" name="expiry" id="expiry" size="7" placeholder="MM/YY">&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="cvc" id="cvc" placeholder="CVC" size="5" maxlength="3"></td>
+    </tr>
+    <tr>
+      <td id="cvcTD"></td>
+    </tr>
+    <tr>
+      <td id="emailTD"><label for="email">E-MAIL</label><br><input type="text" name="email" id="email"></td>
+    </tr>
+    <tr>
+      <td colspan="3" id="payTD"><a href="receiptpage.html"><button type="button" onclick="getData();">Pay</button></a></td>
+    </tr>
+  </table>
+</div>
 </body>
 
 </html>
